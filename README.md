@@ -7,14 +7,14 @@ the player, if the alien get to touch the player he will lose.
 Survive all the time u can (my record is 105 seconds).
 
 How to play it?
-Prerequisites
+1. Prerequisites
 * Make sure you have the following installed:
   - Python 3: If you don't have Python installed, download it from python.org.
   - Pygame: Install it using pip: pip install pygame
 
-Steps to Run: 
+2. Steps to Run: 
 * Clone this repository to your local machine:
   - git clone: https://github.com/ericksoftware/astevoider.git
   - Navigate to the project directory
   - Run the main game file: python main.py
-Enjoy the game! 🎮 (very important step).
+  - Enjoy the game! 🎮 (very important step).
