@@ -149,8 +149,8 @@ if show_initial_screen() == 'start':
 
         new_balls = []
         for ball, dir_x, dir_y, angle in balls:
-            ball.x += dir_x * 2
-            ball.y += dir_y * 2
+            ball.x += dir_x * 5
+            ball.y += dir_y * 5
             angle += .5  
 
             rotated_image = pygame.transform.rotate(ball_image, angle)
@@ -194,13 +194,13 @@ if show_initial_screen() == 'start':
         if enemy_active:
             # Mover el enemigo hacia el jugador
             if enemy.x < player.x:
-                enemy.x += 1
+                enemy.x += 2
             if enemy.x > player.x:
-                enemy.x -= 1
+                enemy.x -= 2
             if enemy.y < player.y:
-                enemy.y += 1
+                enemy.y += 2
             if enemy.y > player.y:
-                enemy.y -= 1
+                enemy.y -= 2
 
             # Calcular el ángulo de rotación del enemigo
             enemy_angle = get_enemy_angle(enemy, player)
@@ -219,11 +219,11 @@ if show_initial_screen() == 'start':
 
         # Control de movimiento del jugador
         keys = pygame.key.get_pressed()
-        speed = 2
+        speed = 5
         moved = False  # Detecta si el jugador se movió
 
         # Configura un ángulo de transición suave (gradual)
-        angle_smoothness = 5  # Qué tan suave será el giro. Cuanto mayor el valor, más lento el giro
+        angle_smoothness = 10  # Qué tan suave será el giro. Cuanto mayor el valor, más lento el giro
 
         # Variable para almacenar el ángulo actual de la nave
         current_angle = last_player_angle  # Inicializamos con el último ángulo del jugador
@@ -318,7 +318,7 @@ if show_initial_screen() == 'start':
         screen.blit(score_text, (WIDTH // 2 - score_text.get_width() // 2, 10))
 
         pygame.display.flip()
-        clock.tick(144)
+        clock.tick(59)
 
 # Pantalla de "Game Over"
 font = pygame.font.SysFont(None, 75)
