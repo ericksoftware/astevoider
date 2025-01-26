@@ -17,4 +17,5 @@ How to play it?
   - git clone: https://github.com/ericksoftware/astevoider.git
   - Navigate to the project directory
   - Run the main game file: python main.py
+  - Press any key to start the game and use WASD to move.
   - Enjoy the game! 🎮 (very important step).
