@@ -1,7 +1,7 @@
 Astevoider is a simple funny 2d game developed using pygames-python.
 
 What is it about?
-The player (the space ship in the game) need to avoid the asteroids that are gonna be around the screen
+- The player (the space ship in the game) need to avoid the asteroids that are gonna be around the screen
 if the player hits an asteroid he will lose, otherwise there is an alien in the game which is always chasing 
 the player, if the alien get to touch the player he will lose.
 Survive all the time u can (my record is 105 seconds).
