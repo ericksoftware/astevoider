@@ -232,40 +232,40 @@ if show_initial_screen() == 'start':
         target_angle = last_player_angle  # Inicialmente es el último ángulo conocido
 
         # Bucle de movimiento y ángulos para diagonales
-        if keys[pygame.K_w] and keys[pygame.K_a]:  # Arriba izquierda
+        if (keys[pygame.K_w] and keys[pygame.K_a]) or (keys[pygame.K_UP] and keys[pygame.K_LEFT]):  # Arriba izquierda
             player.x -= speed
             player.y -= speed
             target_angle = 45  
             moved = True
-        elif keys[pygame.K_w] and keys[pygame.K_d]:  # Arriba derecha
+        elif (keys[pygame.K_w] and keys[pygame.K_d]) or (keys[pygame.K_UP] and keys[pygame.K_RIGHT]):  # Arriba derecha
             player.x += speed
             player.y -= speed
             target_angle = -45  
             moved = True
-        elif keys[pygame.K_s] and keys[pygame.K_a]:  # Abajo izquierda
+        elif (keys[pygame.K_s] and keys[pygame.K_a]) or (keys[pygame.K_DOWN] and keys[pygame.K_LEFT]):  # Abajo izquierda
             player.x -= speed
             player.y += speed
             target_angle = 135  
             moved = True
-        elif keys[pygame.K_s] and keys[pygame.K_d]:  # Abajo derecha
+        elif (keys[pygame.K_s] and keys[pygame.K_d]) or (keys[pygame.K_DOWN] and keys[pygame.K_RIGHT]):  # Abajo derecha
             player.x += speed
             player.y += speed
             target_angle = -135  
             moved = True
         else:  # Movimiento en direcciones simples
-            if keys[pygame.K_a]:  # Izquierda
+            if keys[pygame.K_a] or keys[pygame.K_LEFT]:  # Izquierda
                 player.x -= speed
                 target_angle = 90  
                 moved = True
-            if keys[pygame.K_d]:  # Derecha
+            if keys[pygame.K_d] or keys[pygame.K_RIGHT]:  # Derecha
                 player.x += speed
                 target_angle = -90  
                 moved = True
-            if keys[pygame.K_w]:  # Arriba
+            if keys[pygame.K_w] or keys[pygame.K_UP]:  # Arriba
                 player.y -= speed
                 target_angle = 0  
                 moved = True
-            if keys[pygame.K_s]:  # Abajo
+            if keys[pygame.K_s] or keys[pygame.K_DOWN]:  # Abajo
                 player.y += speed
                 target_angle = 180  
                 moved = True
